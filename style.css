@@ -52,6 +52,7 @@ nav ul {
 	margin-top: 0px;
 }
 
+
 .gallery {
 	padding-bottom: 40px;
 }
@@ -60,7 +61,7 @@ nav ul {
 		margin-bottom: 20px;
 	}
 
-.services {
+.photographyservices {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -76,7 +77,18 @@ nav ul {
 	width: 100%; /* Ensures container takes full width */
 }
 
-.services article {
+
+.services{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+	width: 100%;
+}
+
+
+
+.photographyservices article {
 	background-color: #232323; /* Adjusted background for articles */
 	padding: 30px;
 	border-radius: 10px;
@@ -86,10 +98,52 @@ nav ul {
 	width: calc(33.333% - 20px); /* Ensures proper width and gap */
 }
 
-	.services article:hover {
+	.photographyservices article:hover {
 		transform: translateY(-5px);
 		border-bottom: 4px solid #b3a1d7; /* Soft purple border */
 	}
+
+.services article {
+	background-color: #232323;
+	padding: 30px;
+	border-radius: 10px;
+	flex-basis: calc(33.333% - 20px);
+	box-shadow: 0 4px 8px rgba(90, 77, 115, 0.2);
+	transition: transform 0.2s ease-in-out;
+	width: calc(33.333% - 20px);
+}
+
+	.services article:hover {
+		transform: translateY(-5px);
+		border-bottom: 4px solid #b3a1d7;
+	}
+
+
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 20px;
+	gap: 20px;
+	text-align: center;
+}
+
+	.services article {
+		flex: 1 1 300px;
+		background-color: #232323;
+		padding: 20px;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	.services h2 {
+		text-align: center;
+		width: 100%;
+		margin-bottom: 20px; /* Adds some space below the header */
+	}
+
+
 
 .photo-grid {
 	display: flex;
@@ -122,6 +176,26 @@ nav ul {
 		color: #ffffff;
 	}
 
+.splash {
+	display: flex;
+	align-items: center; /* Align items vertically in the center */
+	justify-content: center; /* Center the content horizontally */
+	padding: 20px;
+	gap: 20px; /* Space between the image and the text */
+}
+
+.profile-img {
+	width: clamp(150px, 30%, 300px); /* Responsive width settings */
+	height: auto; /* Maintains aspect ratio */
+	border-radius: 1%; /* Circular image */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.intro-text {
+	max-width: 600px; /* Limits text width for better readability */
+	text-align: left; /* Aligns text to the left */
+}
+
 .booking {
 	align-content: center;
 	text-align: center;
@@ -135,14 +209,35 @@ nav ul {
 }
 
 @media (max-width: 768px) {
-	.services {
+	.photographyservices {
 		flex-direction: column;
 	}
 
-		.services article, .photo-grid img {
+		.photographyservices article, .photo-grid img {
 			flex-basis: auto;
 		}
+
+
 }
+/*PHOTOGRAPHY*/
+.photographyservices {
+	display: flex;
+	flex-wrap: wrap; /* Allows for wrapping of articles */
+	justify-content: flex-start; /* Aligns articles to the left */
+	padding: 20px;
+	gap: 20px; /* Spacing between articles */
+	text-align: center; /* Centers the text of the services section */
+}
+
+	.photographyservices article {
+		flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
+		background-color: #232323; /* Background color for each article */
+		padding: 20px; /* Padding inside each article */
+		text-align: center; /* Centers the text inside the article */
+		border-radius: 10px; /* Rounded corners for aesthetic */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+	}
+
 
 footer {
 	background-color: #1e1e1e;
@@ -156,6 +251,6 @@ footer {
 	width: calc(100% + 0px);
 }
 
-.services h2, .booking h2, .gallery h2 {
+.photographyservices h2, .booking h2, .gallery h2, .services h2 {
 	text-align: center !important;
 }

@@ -7,18 +7,18 @@
 
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #121212;
-	color: #ccc;
+	background-color: #121212; /* Updated to a darker shade of purple for background */
+	color: #e6e6f0; /* Lighter, soft text color for better readability */
 	line-height: 1.6;
-	padding: 20px;
+	padding: 0px;
 }
 
 header {
-	background-color: #1e1e1e;
-	color: #fff;
+	background-color: #121212; /* Soft purple background for header */
+	color: #ffffff;
 	padding: 20px 0;
 	text-align: center;
-	border-bottom: 3px solid purple;
+	border-bottom: 4px solid #b3a1d7; /* Soft purple border */
 }
 
 nav ul {
@@ -32,44 +32,117 @@ nav ul {
 	}
 
 		nav ul li a {
-			color: #b3a1d7;
+			color: #dcd5f8; /* Soft purple link color */
 			text-decoration: none;
 			transition: color 0.3s ease-in-out;
 		}
 
 			nav ul li a:hover {
-				color: #dcdcdc;
+				color: #c5bedd; /* Darker purple on hover */
 			}
 
 .hero {
 	background-color: #282828;
 	color: #fff;
-	padding: 50px 20px;
+	padding: 20px 30px;
 	text-align: center;
 	border-radius: 15px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	margin-top: 0px;
 }
+
+.gallery {
+	padding-bottom: 40px;
+}
+
+	.gallery h2 {
+		margin-bottom: 20px;
+	}
 
 .services {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding-top: 20px;
+}
+
+.service-articles {
+	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	gap: 20px;
+	width: 100%; /* Ensures container takes full width */
+}
+
+.services article {
+	background-color: #232323; /* Adjusted background for articles */
+	padding: 30px;
+	border-radius: 10px;
+	flex-basis: calc(33.333% - 20px);
+	box-shadow: 0 4px 8px rgba(90, 77, 115, 0.2); /* Soft purple shadow */
+	transition: transform 0.2s ease-in-out;
+	width: calc(33.333% - 20px); /* Ensures proper width and gap */
+}
+
+	.services article:hover {
+		transform: translateY(-5px);
+		border-bottom: 4px solid #b3a1d7; /* Soft purple border */
+	}
+
+.photo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	gap: 20px;
 }
 
-	.services article {
-		background-color: #232323;
-		padding: 20px;
+	.photo-grid img {
+		width: 100%;
+		height: auto;
 		border-radius: 10px;
-		flex-basis: calc(33.333% - 20px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transition: transform 0.2s ease-in-out;
+		max-height: 500px;
+		object-fit: contain;
 	}
 
-		.services article:hover {
-			transform: translateY(-5px);
+.contact-button {
+	display: inline-block;
+	background-color: #b3a1d7; /* Theme color for button */
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+	.contact-button:hover {
+		background-color: #9e8fb2; /* Darker on hover */
+		color: #ffffff;
+	}
+
+.booking {
+	align-content: center;
+	text-align: center;
+	padding: 20px;
+}
+
+@media (min-width: 768px) {
+	.photo-grid img {
+		flex: 1 1 calc(33% - 20px);
+	}
+}
+
+@media (max-width: 768px) {
+	.services {
+		flex-direction: column;
+	}
+
+		.services article, .photo-grid img {
+			flex-basis: auto;
 		}
+}
 
 footer {
 	background-color: #1e1e1e;
@@ -77,19 +150,12 @@ footer {
 	text-align: center;
 	padding: 20px;
 	margin-top: 20px;
-	border-top: 3px solid purple;
+	border-top: 4px solid #b3a1d7;
 	position: relative;
 	bottom: 0;
-	width: calc(100% - 40px);
+	width: calc(100% + 0px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-	.services {
-		flex-direction: column;
-	}
-
-		.services article {
-			flex-basis: auto;
-		}
+.services h2, .booking h2, .gallery h2 {
+	text-align: center !important;
 }

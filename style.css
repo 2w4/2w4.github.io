@@ -268,7 +268,12 @@ nav ul {
 	text-align: center; /* Centers the text inside the article */
 	border-radius: 0px; /* Rounded corners for aesthetic */
 	
-} 
+}
+.about-me-description article:hover {
+	transform: translateY(-5px);
+	border-bottom: 4px solid #b3a1d7;
+}
+
 
 
 footer {

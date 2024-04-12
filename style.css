@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: #121212; /* Updated to a darker shade of purple for background */
@@ -21,6 +22,8 @@ header {
 	border-bottom: 4px solid #b3a1d7; /* Soft purple border */
 }
 
+
+/* Navigation */
 nav ul {
 	list-style: none;
 	padding: 0;
@@ -41,83 +44,30 @@ nav ul {
 				color: #c5bedd; /* Darker purple on hover */
 			}
 
-.hero {
-	background-color: #282828;
-	color: #fff;
-	padding: 20px 30px;
-	text-align: center;
-	border-radius: 15px;
-	margin-bottom: 10px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-	margin-top: 0px;
+
+/*INDEX*/
+.splash {
+	display: flex;
+	align-items: center; /* Align items vertically in the center */
+	justify-content: center; /* Center the content horizontally */
+	padding: 20px;
+	gap: 20px; /* Space between the image and the text */
 }
-
-
-.gallery {
-	padding-bottom: 40px;
-}
-
-	.gallery h2 {
-		margin-bottom: 20px;
+	.services article {
+		background-color: #232323;
+		padding: 30px;
+		border-radius: 10px;
+		flex-basis: calc(33.333% - 20px);
+		box-shadow: 0 4px 8px rgba(90, 77, 115, 0.2);
+		transition: transform 0.2s ease-in-out;
+		width: calc(33.333% - 20px);
 	}
-
-.photographyservices {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-	padding-top: 20px;
-}
-
-.service-articles {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	gap: 20px;
-	width: 100%; /* Ensures container takes full width */
-}
-
-
-.services{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	gap: 20px;
-	width: 100%;
-}
-
-
-
-.photographyservices article {
-	background-color: #232323; /* Adjusted background for articles */
-	padding: 30px;
-	border-radius: 10px;
-	flex-basis: calc(33.333% - 20px);
-	box-shadow: 0 4px 8px rgba(90, 77, 115, 0.2); /* Soft purple shadow */
-	transition: transform 0.2s ease-in-out;
-	width: calc(33.333% - 20px); /* Ensures proper width and gap */
-}
-
-	.photographyservices article:hover {
-		transform: translateY(-5px);
-		border-bottom: 4px solid #b3a1d7; /* Soft purple border */
-	}
-
-.services article {
-	background-color: #232323;
-	padding: 30px;
-	border-radius: 10px;
-	flex-basis: calc(33.333% - 20px);
-	box-shadow: 0 4px 8px rgba(90, 77, 115, 0.2);
-	transition: transform 0.2s ease-in-out;
-	width: calc(33.333% - 20px);
-}
 
 	.services article:hover {
 		transform: translateY(-5px);
 		border-bottom: 4px solid #b3a1d7;
-	}
 
+	}
 
 .services {
 	display: flex;
@@ -142,24 +92,65 @@ nav ul {
 		width: 100%;
 		margin-bottom: 20px; /* Adds some space below the header */
 	}
+.profile-img {
+	width: clamp(150px, 30%, 300px); /* Responsive width settings */
+	height: auto; /* Maintains aspect ratio */
+	border-radius: 1%; /* Circular image */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.intro-text {
+	max-width: 600px; /* Limits text width for better readability */
+	text-align: left; /* Aligns text to the left */
+}
 
 
-
-.photo-grid {
+/*PHOTOGRAPHY*/
+.service-articles {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	gap: 20px;
+	width: 100%; /* Ensures container takes full width */
 }
 
-	.photo-grid img {
-		width: 100%;
-		height: auto;
-		border-radius: 10px;
-		max-height: 500px;
-		object-fit: contain;
+.hero {
+	background-color: #282828;
+	color: #fff;
+	padding: 20px 30px;
+	text-align: center;
+	border-radius: 15px;
+	margin-bottom: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	margin-top: 0px;
+}
+
+
+.gallery {
+	padding-bottom: 40px;
+}
+
+	.gallery h2 {
+		margin-bottom: 20px;
 	}
 
+.photographyservices {
+	display: flex;
+	flex-wrap: wrap; /* Allows for wrapping of articles */
+	justify-content: flex-start; /* Aligns articles to the left */
+	padding: 20px;
+	gap: 20px; /* Spacing between articles */
+	text-align: center; /* Centers the text of the services section */
+}
+
+.photographyservices article {
+		flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
+		background-color: #232323; /* Background color for each article */
+		padding: 20px; /* Padding inside each article */
+		text-align: center; /* Centers the text inside the article */
+		border-radius: 10px; /* Rounded corners for aesthetic */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
 .contact-button {
 	display: inline-block;
 	background-color: #b3a1d7; /* Theme color for button */
@@ -176,32 +167,11 @@ nav ul {
 		color: #ffffff;
 	}
 
-.splash {
-	display: flex;
-	align-items: center; /* Align items vertically in the center */
-	justify-content: center; /* Center the content horizontally */
-	padding: 20px;
-	gap: 20px; /* Space between the image and the text */
-}
-
-.profile-img {
-	width: clamp(150px, 30%, 300px); /* Responsive width settings */
-	height: auto; /* Maintains aspect ratio */
-	border-radius: 1%; /* Circular image */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow */
-}
-
-.intro-text {
-	max-width: 600px; /* Limits text width for better readability */
-	text-align: left; /* Aligns text to the left */
-}
-
 .booking {
 	align-content: center;
 	text-align: center;
 	padding: 20px;
 }
-
 @media (min-width: 768px) {
 	.photo-grid img {
 		flex: 1 1 calc(33% - 20px);
@@ -216,28 +186,10 @@ nav ul {
 		.photographyservices article, .photo-grid img {
 			flex-basis: auto;
 		}
-
-
-}
-/*PHOTOGRAPHY*/
-.photographyservices {
-	display: flex;
-	flex-wrap: wrap; /* Allows for wrapping of articles */
-	justify-content: flex-start; /* Aligns articles to the left */
-	padding: 20px;
-	gap: 20px; /* Spacing between articles */
-	text-align: center; /* Centers the text of the services section */
 }
 
-	.photographyservices article {
-		flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
-		background-color: #232323; /* Background color for each article */
-		padding: 20px; /* Padding inside each article */
-		text-align: center; /* Centers the text inside the article */
-		border-radius: 10px; /* Rounded corners for aesthetic */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
-	}
 
+/*ABOUT ME*/
 .about-me {
 	display: flex;
 	flex-wrap: wrap; /* Allows for wrapping of articles */
@@ -247,8 +199,7 @@ nav ul {
 	text-align: center; /* Centers the text of the services section */
 }
 
-
-	.about-me article {
+.about-me article {
 		flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
 		background-color: #232323; /* Background color for each article */
 		padding: 20px; /* Padding inside each article */
@@ -274,8 +225,7 @@ nav ul {
 	border-bottom: 4px solid #b3a1d7;
 }
 
-
-
+/*FOOTER*/
 footer {
 	background-color: #1e1e1e;
 	color: #ccc;
@@ -288,6 +238,7 @@ footer {
 	width: calc(100% + 0px);
 }
 
+/* Responsive Design */
 .photographyservices h2, .booking h2, .gallery h2, .services h2 {
 	text-align: center !important;
 }

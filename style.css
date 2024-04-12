@@ -238,6 +238,38 @@ nav ul {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
 	}
 
+.about-me {
+	display: flex;
+	flex-wrap: wrap; /* Allows for wrapping of articles */
+	justify-content: flex-start; /* Aligns articles to the left */
+	padding: 20px;
+	gap: 20px; /* Spacing between articles */
+	text-align: center; /* Centers the text of the services section */
+}
+
+
+	.about-me article {
+		flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
+		background-color: #232323; /* Background color for each article */
+		padding: 20px; /* Padding inside each article */
+		text-align: center; /* Centers the text inside the article */
+		border-radius: 20px; /* Rounded corners for aesthetic */
+		margin-top: 20px; /* Adds space above each article */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+	}
+.about-me h2{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 20px; /* Adds some space below the header */
+}
+.about-me-description {
+	flex: 1 1 300px; /* Allows flex items to grow and shrink but not smaller than 300px */
+	padding: 20px; /* Padding inside each article */
+	text-align: center; /* Centers the text inside the article */
+	border-radius: 0px; /* Rounded corners for aesthetic */
+	
+} 
+
 
 footer {
 	background-color: #1e1e1e;

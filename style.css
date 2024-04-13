@@ -167,6 +167,22 @@ nav ul {
 		color: #ffffff;
 	}
 
+.photo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+	padding: 20px;
+}
+	.photo-grid img {
+		max-width: 100%; /* Ensures images do not overflow their container */
+		height: auto; /* Maintains aspect ratio */
+		border-radius: 10px;
+		object-fit: cover; /* Adjusts the images' fitting within their boxes, change to 'contain' if full image needs to be shown */
+		width: clamp(200px, 33%, 300px); /* Responsive width settings, adjust as needed */
+	}
+
+
 .booking {
 	align-content: center;
 	text-align: center;
@@ -181,9 +197,10 @@ nav ul {
 @media (max-width: 768px) {
 	.photographyservices {
 		flex-direction: column;
+		
 	}
 
-		.photographyservices article, .photo-grid img {
+		.photographyservices article, .photo-grid {
 			flex-basis: auto;
 		}
 }
